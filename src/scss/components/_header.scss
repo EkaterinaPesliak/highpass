@@ -1,0 +1,197 @@
+.header {
+  background-color: #202020;
+  &__container {
+    padding-top: 24px;
+    padding-bottom: 21px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      padding-bottom: 25px;
+    }
+
+    @include mobile {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__logo {
+    margin-right: 139px;
+
+    @include between {
+      margin-right: 0;
+    }
+
+    @include tablet {
+      margin-right: 57px;
+    }
+  }
+
+  &__img {
+    @include tablet {
+      max-width: 86%;
+    }
+
+    @include mobile {
+      max-width: 59%;
+    }
+  }
+
+  &__nav-burger {
+    display: none;
+
+  }
+
+  &__nav-burger.active {
+    display: block;
+  }
+
+  &__nav-wrapper {
+    z-index: 1000;
+    min-height: 100vh;
+    min-width: 100%;
+    background: #202020;
+    flex-direction: column;
+    padding-top: 13px;
+    padding-bottom: 37px;
+    padding-left: 21px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 150px;
+  }
+
+  &__burger-item {
+    color: #FFF;
+    font-family: 'TTFirsNeue';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__btn-close {
+    margin-bottom: 16px;
+  }
+
+  &__burger-list {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__tel {
+    margin-top: auto;
+    color: #FF6E30;
+    font-family: 'TTFirsNeue';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: url('../../img/svg/phone.svg');
+      margin-right: 5px;
+    }
+  }
+
+  &__burger {
+    display: none;
+    background: #4A4A4A;
+    padding-top: 14px;
+    padding-bottom: 9px;
+
+
+
+    @include mobile {
+      display: block;
+
+      .none {
+        display: none;
+      }
+
+    }
+
+
+
+  }
+}
+
+.nav {
+  margin-right: auto;
+
+  @include between {
+    margin-right: 0;
+  }
+
+  @include tablet {
+    margin-right: auto;
+  }
+
+  @include small-tablet {
+    display: none;
+  }
+
+  &__list {
+    gap: 79px;
+
+    @include tablet {
+      gap: 33px;
+    }
+  }
+
+  &__link {
+    color: #FFF;
+    font-family: 'TTFirsNeue';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: #FF6E30;
+    }
+
+    &:active {
+      color: #FF6E30;
+    }
+  }
+
+.nav__link:focus-visible {
+  color: #FFF;
+  background-color: #BC572B;
+  padding: 0px 5px;
+}
+
+
+}
+
+.nav2 {
+  display: none;
+
+  @include small-tablet {
+    display: block;
+    background-color: #4A4A4A;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &__list {
+    justify-content: space-between;
+
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+}
+
+.header__burger.none {
+  display: none;
+}
